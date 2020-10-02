@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+
+      <div class="cart">Cart ({{ cart.length }})</div>
+      <product-display :premium="premium" v-on:add-to-cart="updateCart"/>
+    </div>
+
+    <!-- Import Js -->
+    <script src="./main.js"></script>
+
+    <!-- Import components -->
+    <script src="./components/ProductDisplay.js"></script>
+    <script src="./components/ReviewForm.js"></script>
+    <script src="./components/ReviewList.js"></script>
+
+    <!-- Mount app -->
+    <script>
+      const mountApp = app.mount('#app')
+    </script>
+  </body>
+</html>
